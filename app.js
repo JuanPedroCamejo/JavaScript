@@ -108,7 +108,6 @@ const actualizarCarrito = () => {
 }
 
 
-
 Swal.fire({
     title: 'ADIDAS!',
     text: 'Expresando tu estilo.',
