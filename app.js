@@ -82,6 +82,7 @@ const eliminarDelCarrito = (prodId) => {
     console.log(carrito)
 }
 
+
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML = "" 
     carrito.forEach((prod) => {
@@ -105,5 +106,17 @@ const actualizarCarrito = () => {
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
     
 }
+
+
+
+Swal.fire({
+    title: 'ADIDAS!',
+    text: 'Expresando tu estilo.',
+    imageUrl: 'https://i.pinimg.com/originals/41/ca/4b/41ca4b80bab9e9bdb26c25abec46b960.jpg',
+    imageWidth: 300,
+    imageHeight: 400,
+    imageAlt: 'Custom image',
+})
+
 
 //Finalizando
