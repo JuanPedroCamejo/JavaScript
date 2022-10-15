@@ -82,7 +82,6 @@ const eliminarDelCarrito = (prodId) => {
     console.log(carrito)
 }
 
-
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML = "" 
     carrito.forEach((prod) => {
@@ -105,8 +104,8 @@ const actualizarCarrito = () => {
     console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
     
-}
 
+}
 
 Swal.fire({
     title: 'ADIDAS!',
@@ -116,37 +115,3 @@ Swal.fire({
     imageHeight: 400,
     imageAlt: 'Custom image',
 })
-
-
-Swal.fire({
-    title: 'ADIDAS!',
-    text: 'Expresando tu estilo.',
-    imageUrl: 'https://i.pinimg.com/originals/41/ca/4b/41ca4b80bab9e9bdb26c25abec46b960.jpg',
-    imageWidth: 300,
-    imageHeight: 400,
-    imageAlt: 'Custom image',
-})
-
-const cargarProductos = async() => {
-    try{
-        const respuesta = await fetch(`https://jsonplaceholder.typicode.com/todos/1`);
-
-        console.log(respuesta);
-
-        if(respuesta.status === 200){
-            const datos = await respuesta.json();
-            console.log(datos.productos)
-        } else if(respuesta.status === 401){
-            console.log(`Este nombre no condice`);
-        } else if(respuesta.status === 404){
-            console.log(`No se cuenta con referido producto`)
-        }
-
-
-
-    } catch(error){
-        console.log(error);
-    }
-}
-
-cargarProductos();
